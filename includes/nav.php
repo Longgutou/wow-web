@@ -19,32 +19,32 @@
       <ul class="nav navbar-nav">
         <?php
         if($page == "register") {
-          echo "<li class='active'><a href='?p=register'>Register</a></li>";
+          echo "<li class='active'><a href='?p=register'>注册</a></li>";
         }else{
-          echo "<li><a href='?p=register'>Register</a></li>";
+          echo "<li><a href='?p=register'>注册</a></li>";
         }
 
         if($page == "status") {
-          echo "<li class='active'><a href='?p=status'>Status</a></li>";
+          echo "<li class='active'><a href='?p=status'>服务器状态</a></li>";
         }else{
-          echo "<li><a href='?p=status'>Status</a></li>";
+          echo "<li><a href='?p=status'>服务器状态</a></li>";
         }
+//
+//        if($page == "connect") {
+//          echo "<li class='active'><a href='?p=connect'>How to Connect</a></li>";
+//        }else{
+//          echo "<li><a href='?p=connect'>How to Connect</a></li>";
+//        }
 
-        if($page == "connect") {
-          echo "<li class='active'><a href='?p=connect'>How to Connect</a></li>";
-        }else{
-          echo "<li><a href='?p=connect'>How to Connect</a></li>";
-        }
-
-        if($page == "downloads") {
-          echo "<li class='active'><a href='?p=downloads'>Downloads</a></li>";
-        }else{
-          echo "<li><a href='?p=downloads'>Downloads</a></li>";
-        }
+//        if($page == "downloads") {
+//          echo "<li class='active'><a href='?p=downloads'>Downloads</a></li>";
+//        }else{
+//          echo "<li><a href='?p=downloads'>Downloads</a></li>";
+//        }
         ?>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="?p=info"><span class="glyphicon glyphicon-search"></span> Info</a></li>
+        <li><a href="?p=info"><span class="glyphicon glyphicon-search"></span> 修复历史</a></li>
       </ul>
     </div>
   </div>

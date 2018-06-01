@@ -226,10 +226,10 @@ function getonlineplayers() {
     <div class="row">
       <div class="col-sm-7 col-xs-12">
         <div class="panel panel-default">
-          <div class="panel-heading">Server Status</div>
+          <div class="panel-heading">服务器在线情况</div>
           <div class="panel-body">
             <div class="progress">
-              <div class="progresstext"><?php echo getplayercount(); ?>/100 Players Online</div>
+              <div class="progresstext"><?php echo getplayercount(); ?>/100 在线玩家</div>
               <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="<?php echo getplayercount(); ?>" aria-valuemin="0" aria-valuemax="100" style="width:<?php echo getplayercount(); ?>%">
               </div>
             </div>
@@ -242,20 +242,20 @@ function getonlineplayers() {
                         <?php
                         exec('Tasklist | findstr "worldserver.exe"', $output);
                         if(empty($output)) {
-                          echo "Server <font color='ff0000'>Offline</font>";
+                          echo "服务器 <font color='ff0000'>下线</font>";
                         }else{
-                          echo "Server <font color='00ff00'>Online</font>";
+                          echo "服务器 <font color='00ff00'>在线</font>";
                         }
                         ?>
                       </center>
                     </th>
                   </tr>
                   <tr>
-                    <th>Name</th>
-                    <th>Class</th>
-                    <th>Race</th>
-                    <th>Level</th>
-                    <th>Faction</th>
+                    <th>姓名</th>
+                    <th>职业</th>
+                    <th>种族</th>
+                    <th>等级</th>
+                    <th>阵营</th>
                   </tr>
                 </thead>
                 <tbody>
