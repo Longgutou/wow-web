@@ -24,15 +24,15 @@ $('document').ready(function()
         },
         messages:
         {
-            user: "Username Needs To Be Minimum of 3 Characters",
+            user: "用户名只是需要三个字符",
             pass:{
-                required: "Provide a Password",
-                minlength: "Password Needs To Be Minimum of 3 Characters"
+                required: "需要输入密码",
+                minlength: "密码最少需要三个字符"
             },
-            email: "Enter a Valid Email",
+            email: "请输入正确的邮箱",
             pass2:{
-                required: "Retype Your Password",
-                equalTo: "Password Mismatch! Retype"
+                required: "重新输入你的密码",
+                equalTo: "密码不匹配,重新输入你的密码"
             }
         },
         submitHandler: submitForm
@@ -52,7 +52,7 @@ $('document').ready(function()
             beforeSend: function()
             {
                 $("#error").fadeOut();
-                $("#btn-submit").html('<span class="glyphicon glyphicon-transfer"></span> &nbsp; sending ...');
+                $("#btn-submit").html('<span class="glyphicon glyphicon-transfer"></span> &nbsp; 创建中 ...');
             },
             success :  function(data)
             {
@@ -61,9 +61,9 @@ $('document').ready(function()
                     $("#error").fadeIn(1000, function(){
 
 
-                        $("#error").html('<div class="alert alert-danger"> <span class="glyphicon glyphicon-info-sign"></span> &nbsp; Sorry, Username already exist</div>');
+                        $("#error").html('<div class="alert alert-danger"> <span class="glyphicon glyphicon-info-sign"></span> &nbsp; 抱歉,用户名已存在</div>');
 
-                        $("#btn-submit").html('<span class="glyphicon glyphicon-log-in"></span> &nbsp; Create Account');
+                        $("#btn-submit").html('<span class="glyphicon glyphicon-log-in"></span> &nbsp; 创建账号');
 
                     });
 
@@ -71,8 +71,8 @@ $('document').ready(function()
                 else if(data=="registered")
                 {
                     $(".form-signin").fadeOut(500);
-                    $("#success").html("<div class=\'alert alert-success alert-dismissable fade in\'>Successfully created account !<br>set realmlist 127.0.0.1</div>");
-                    $("#btn-submit").html('Signing Up');
+                    $("#success").html("<div class=\'alert alert-success alert-dismissable fade in\'>已经成功创建账号 !<br>修改 realmlist 47.93.198.61</div>");
+                    $("#btn-submit").html('注册中');
                 }
                 else{
 
@@ -80,7 +80,7 @@ $('document').ready(function()
 
                         $("#error").html('<div class="alert alert-danger"><span class="glyphicon glyphicon-info-sign"></span> &nbsp; '+data+' !</div>');
 
-                        $("#btn-submit").html('<span class="glyphicon glyphicon-log-in"></span> &nbsp; Create Account');
+                        $("#btn-submit").html('<span class="glyphicon glyphicon-log-in"></span> &nbsp; 创建账号');
 
                     });
 
