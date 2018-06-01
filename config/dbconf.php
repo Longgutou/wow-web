@@ -1,7 +1,7 @@
 <?php
-$dbhost = "47.93.198.61";
-$dbuser = "root";
-$dbpass = "root";
+$dbhost = "127.0.0.1";
+$dbuser = "trinity";
+$dbpass = "trinity";
 $accdb = "auth";
 $chardb = "characters";
 
